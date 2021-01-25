@@ -1,4 +1,7 @@
 name: .NET
+defaults:
+  run:
+    working-directory: openhack-devops/apis/poi
 
 on:
   push:
