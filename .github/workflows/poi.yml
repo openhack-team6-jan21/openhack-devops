@@ -1,7 +1,4 @@
 name: .NET
-defaults:
-  run:
-    working-directory: openhack-devops/apis/poi
 
 on:
   push:
@@ -18,8 +15,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-   # - name: Restore dependencies
-   #   run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Test
