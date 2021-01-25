@@ -1,4 +1,7 @@
 name: .NET
+defaults:
+  run:
+    working-directory: apis/poi/tests/UnitTests
 
 on:
   push:
