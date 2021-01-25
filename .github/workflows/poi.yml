@@ -5,10 +5,12 @@ defaults:
 
 on:
   push:
-    paths: apis/poi
+    paths: 
+      - 'apis/poi/**'
   pull_request:
     branches: [ master ]
-    paths: apis/poi
+    paths:
+      - 'apis/poi/**'
     
 
 jobs:
