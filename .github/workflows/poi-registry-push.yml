@@ -34,3 +34,11 @@ jobs:
        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
        images: 'openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}'
        
+    - name: Azure CLI Action
+      uses: Azure/cli@1.0.4
+      with:
+        # Specify the script here
+        inlineScript: 
+          'az webapp deployment slot swap  -g openhackgrb2e289rg -n openhackgrb2e289poi --slot staging --target-slot production'
+        # Azure CLI version to be used to execute the script. If not provided, latest version is used 
+
