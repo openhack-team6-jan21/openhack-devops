@@ -24,13 +24,13 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - run: |
-        docker build . -t openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }}
-        docker push openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }} 
+        docker build . -t openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}
+        docker push openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }} 
 
     - uses: azure/webapps-deploy@v2
       with:
        app-name: 'openhackgrb2e289poi'
        slot-name: 'staging'
        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
-       images: 'openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }}'
+       images: 'openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}'
        
