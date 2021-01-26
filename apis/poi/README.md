@@ -4,7 +4,7 @@
 ## Overview
 
 ## Build the Application
-Test again again and again
+Test again
 
 ## Tests
 
