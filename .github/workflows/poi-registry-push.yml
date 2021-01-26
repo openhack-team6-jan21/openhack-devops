@@ -7,7 +7,7 @@ on:
     paths: 
       - 'apis/poi/**'
 
-name: Linux_Container_Node_Workflow
+name: Registry_Push_And_Deploy_DotNet
 
 jobs:
   build-and-deploy:
