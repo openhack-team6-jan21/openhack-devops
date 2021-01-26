@@ -29,6 +29,6 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-       app-name: 'openhackgrb2e289poi-staging'
+       app-name: 'openhackgrb2e289poi/staging'
        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
        images: 'openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }}'
