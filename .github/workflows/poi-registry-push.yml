@@ -34,6 +34,15 @@ jobs:
        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
        images: 'openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}'
        
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+        creds: 
+        # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
+          ${{ secrets.AZURE_CREDENTIALS }}
+
+      
     - name: Azure CLI Action
       uses: Azure/cli@1.0.4
       with:
