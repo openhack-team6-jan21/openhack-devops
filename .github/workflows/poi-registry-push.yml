@@ -19,13 +19,13 @@ jobs:
 
     - uses: azure/docker-login@v1
       with:
-        login-server: openhackrid7tdj5acr.azurecr.io        
+        login-server: openhackgrb2e289acr.azurecr.io        
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - run: |
-        docker build . -t openhackrid7tdj5acr.azurecr.io/devopsoh/api-poi:${{ github.sha }}
-        docker push openhackrid7tdj5acr.azurecr.io/devopsoh/api-poi:${{ github.sha }} 
+        docker build . -t openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }}
+        docker push openhackgrb2e289acr.azurecr.io/devopsoh/api-poi:${{ github.sha }} 
 
     #- uses: azure/webapps-deploy@v2
     #with:
