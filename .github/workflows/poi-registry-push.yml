@@ -40,7 +40,7 @@ jobs:
         # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
           ${{ secrets.AZURE_CREDENTIALS }}
     - name: polling production
-      run: scripts/healthcheck.sh    
+      run: /scripts/healthcheck.sh    
        
    # - name: Azure CLI Action
     #  uses: Azure/cli@1.0.4
