@@ -41,7 +41,7 @@ jobs:
           ${{ secrets.AZURE_CREDENTIALS }}
     - name: Health-check staging
       working-directory: ./scripts
-      run: healthcheck.sh    
+      run: bash healthcheck.sh    
        
    # - name: Azure CLI Action
     #  uses: Azure/cli@1.0.4
