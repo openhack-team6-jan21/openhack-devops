@@ -4,8 +4,6 @@ defaults:
 on: 
   push:
     branches: [master]
-    paths: 
-      - 'apis/poi/**'
 
 name: Registry_Push_And_Deploy_DotNet
 
@@ -42,7 +40,7 @@ jobs:
         # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
           ${{ secrets.AZURE_CREDENTIALS }}
     - name: polling production
-      run: ./.github/github-script.sh    
+      run: .github/healthcheck.sh    
        
     - name: Azure CLI Action
       uses: Azure/cli@1.0.4
