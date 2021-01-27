@@ -51,12 +51,15 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     - if: matrix.language == 'csharp' 
       name: Build CSharp
+      working-directory: apis/poi
       run: |
         dotnet restore
         dotnet build
+        
 
     - if: matrix.language == 'java' 
       name: Build Java
+      working-directory: apis/user-java
       run: |
         mvn clean install
         
