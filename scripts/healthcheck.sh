@@ -1,4 +1,4 @@
-#!/bin/bash
+
 declare -i duration=10 
 declare hasUrl="" 
 declare r 
